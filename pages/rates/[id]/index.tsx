@@ -1,25 +1,25 @@
 // pages/coin/[id].tsx
 import React from 'react';
 import { useRouter } from 'next/router';
-import { QueryClient, dehydrate, useQuery } from 'react-query';
-import { Container, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { useQuery } from 'react-query';
+import { Container, Grid, Typography } from '@mui/material';
 import axios from 'axios';
 // import Link from 'next/link';
 
-export async function getStaticProps() {
-  const queryClient = new QueryClient()
+// export async function getStaticProps() {
+//   const queryClient = new QueryClient()
 
-  await queryClient.prefetchQuery({
-    queryKey: [`rates-${id}`],
-    queryFn: ()=> CoinDetailsPage ()
-  })
+//   await queryClient.prefetchQuery({
+//     queryKey: [`rates`],
+//     queryFn: ()=> CoinDetailsPage ()
+//   })
 
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient),
-    },
-  }
-}
+//   return {
+//     props: {
+//       dehydratedState: dehydrate(queryClient),
+//     },
+//   }
+// }
 
 const CoinDetailsPage = () => {
   const router = useRouter();
