@@ -8,6 +8,7 @@ import CoinHistryPage from '@/Components/histry';
 // import MarketsPage from '@/pages/markets';
 import CoinMarketPage from '@/Components/markets';
 import Wrapper from '@/Layout/wraper';
+import MarketsPage from '@/pages/markets';
 
 
 
@@ -44,7 +45,7 @@ const CoinDetailsPage = () => {
           <CoinHistryPage/>
         </Grid>
         <Grid item xs={6}>
-          <CoinMarketPage/>
+          <MarketsPage/>
         </Grid>
         </Grid>
         </Box>

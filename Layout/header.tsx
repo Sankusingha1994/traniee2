@@ -18,7 +18,7 @@ import { Url } from "next/dist/shared/lib/router/router";
 const pages = [
   {
     title: "Rate",
-    path: "/rate",
+    path: "/rates",
   },
   {
     title: "Exchange",
@@ -26,7 +26,7 @@ const pages = [
   },
   {
     title: "Market",
-    path: "/market",
+    path: "/markets",
   },
 ]
 

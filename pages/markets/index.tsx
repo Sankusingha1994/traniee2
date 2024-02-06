@@ -22,7 +22,42 @@ const MarketsPage = () => {
     <Wrapper>
     <Container>
       <Typography variant="h4">Markets List</Typography>
-      <List>
+      <TableContainer sx={{border:"2px solid red",borderRadius:"20px"}}>
+       <Table sx={{background:"yellow"}}>
+       <TableHead >
+          <TableRow>
+<TableCell sx={{color:"red", fontSize:"20px", textAlign:"center"}}>Id</TableCell>
+            <TableCell sx={{color:"red", fontSize:"20px", textAlign:"center"}}>Symbol</TableCell>
+           <TableCell sx={{color:"red", fontSize:"20px", textAlign:"center"}}>CurrencySymbol</TableCell>
+           <TableCell sx={{color:"red", fontSize:"20px", textAlign:"center"}}>RateUsd</TableCell>
+           <TableCell sx={{color:"red", fontSize:"20px", textAlign:"center"}}>Type</TableCell>
+             </TableRow>
+        </TableHead>
+        <TableBody>
+           {data.data.map((market: any) => (
+             <TableRow key={market.id}>
+               <TableCell>
+               {market.rank}
+               </TableCell>
+               <TableCell>
+               {market.exchangeId}
+               </TableCell>
+               <TableCell>
+               {market.quoteSymbol}
+               </TableCell>
+               <TableCell>
+               {market.baseId}
+               </TableCell>
+               <TableCell>
+               {market.priceQuote}
+               </TableCell>
+             </TableRow>
+             
+          ))}
+         </TableBody>
+       </Table>
+       </TableContainer>
+      {/* <List>
         {data.data.map((market: any) => (
           <ListItem key={market.id}>
             <ListItemText primary={market.rank} />
@@ -32,7 +67,7 @@ const MarketsPage = () => {
             <ListItemText primary={market.priceQuote} />
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </Container>
     </Wrapper>
   );
